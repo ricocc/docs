@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Docsify</title>
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css"> -->
+    <link rel="stylesheet" href="themes/vue.css">
+</head>
+
+<body>
+    <div id="app">Loading...</div>
+
+
+
+    <script>
+        window.$docsify = {
+            el: '#app',
+             // 加载侧边栏 _sidebar.md
+            loadSidebar: true,
+            subMaxLevel: 2,
+
+            // 头部导航
+            loadNavbar:true,
+
+            //logo name 
+            //logo: '_images/logo.svg',
+            name: 'RICOCC',
+            nameLink:'/',
+            
+            // 入口文件，默认为README.md
+            homepage: '',
+
+            // 切换页面后是否自动跳转到页面顶部，默认false
+            auto2top: '',
+            //只在访问主页时加载封面
+            onlyCover: false,
+            // 封面页，默认加载 _coverpage.md
+            //coverpage: 'cover.md',
+
+            // 在找不到指定页面时加载 _404.md
+            //notFoundPage: true
+
+             // 小屏设备下合并导航栏到侧边栏
+            mergeNavbar: true,
+            coverpage: false, //生成封面
+            alias: {
+                '/.*/_sidebar.md': '/_sidebar.md'
+            },
+
+            // 搜索功能相关
+            search: {
+            maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+            paths: 'auto',
+            placeholder: 'Type to search',
+            noData: 'No Results!',
+            depth: 6          // 搜索标题的最大程级, 1 - 6
+            },
+
+            // 代码块点击复制
+            copyCode: {
+            buttonText : 'Copy',
+            errorText  : 'Error',
+            successText: 'Copied'
+            },
+
+            // Github横幅
+            //repo: 'https://github.com/zxiaosi/doc.git',
+            footer: {
+               copy: '<span>Copyright &copy; 2021 &nbsp 💖 &nbsp</span>',
+               auth: ' <strong><a href="" target="_blank">Ricocc</a></strong>',
+               pre: '<hr/>',
+               style: 'font-size: 18px; text-align: center;',
+             },
+
+        }
+    </script>
+
+    <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script> -->
+    <script src="lib/docsify.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+
+    <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
+    <!-- 图片放大插件 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+
+
+</body>
+
+</html>

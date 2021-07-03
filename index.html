@@ -4,10 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="_images/favicon2.ico" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Docsify</title>
+    <title>Rico的学习文档 | Rico的博客</title>
+    <meta name="keywords" content="Rico,网页设计师,UI设计,设计博客,网页,设计学Vue,3D,Blender,设计作品,写代码的设计">
+    <meta name="description" content="2020 web designer,会写代码的设计师,设计爱好者,前端爱好者,rico的个人网站,设计博客,自由设施,设计学Vue,3D,Blender,docsify,设计师如何学习docsify">
     <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css"> -->
     <link rel="stylesheet" href="themes/vue.css">
+    <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" /> -->
+    <link rel="stylesheet" href="themes/sidebar-folder.min.css" />
+
 </head>
 
 <body>
@@ -18,18 +24,23 @@
     <script>
         window.$docsify = {
             el: '#app',
-             // 加载侧边栏 _sidebar.md
+            // 加载侧边栏 _sidebar.md
             loadSidebar: true,
             subMaxLevel: 2,
+            alias: {
+                '/.*/_sidebar.md': '/_sidebar.md',
+            },
+            //侧栏折叠
+            sidebarDisplayLevel: 1, // set sidebar display level    
 
             // 头部导航
-            loadNavbar:true,
+            loadNavbar: true,
 
             //logo name 
             //logo: '_images/logo.svg',
             name: 'RICOCC',
-            nameLink:'/',
-            
+            nameLink: '/',
+
             // 入口文件，默认为README.md
             homepage: '',
 
@@ -43,37 +54,36 @@
             // 在找不到指定页面时加载 _404.md
             //notFoundPage: true
 
-             // 小屏设备下合并导航栏到侧边栏
+            // 小屏设备下合并导航栏到侧边栏
             mergeNavbar: true,
             coverpage: false, //生成封面
-            alias: {
-                '/.*/_sidebar.md': '/_sidebar.md'
-            },
 
             // 搜索功能相关
             search: {
-            maxAge: 86400000, // 过期时间，单位毫秒，默认一天
-            paths: 'auto',
-            placeholder: 'Type to search',
-            noData: 'No Results!',
-            depth: 6          // 搜索标题的最大程级, 1 - 6
+                maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+                paths: 'auto',
+                placeholder: 'Type to search',
+                noData: 'No Results!',
+                depth: 6 // 搜索标题的最大程级, 1 - 6
             },
 
             // 代码块点击复制
             copyCode: {
-            buttonText : 'Copy',
-            errorText  : 'Error',
-            successText: 'Copied'
+                buttonText: 'Copy',
+                errorText: 'Error',
+                successText: 'Copied'
             },
 
             // Github横幅
             //repo: 'https://github.com/zxiaosi/doc.git',
             footer: {
-               copy: '<span>Copyright &copy; 2021 &nbsp 💖 &nbsp</span>',
-               auth: ' <strong><a href="" target="_blank">Ricocc</a></strong>',
-               pre: '<hr/>',
-               style: 'font-size: 18px; text-align: center;',
-             },
+                copy: '<span>Copyright &copy; 2021 &nbsp 💖 &nbsp</span>',
+                auth: ' <strong><a href="" target="_blank">Ricocc</a></strong>',
+                pre: '<hr/>',
+                style: 'font-size: 18px; text-align: center;',
+            },
+
+
 
         }
     </script>
@@ -87,8 +97,8 @@
     <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
     <!-- 图片放大插件 -->
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-
-
+    <!-- 侧栏折叠插件 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 </body>
 
 </html>

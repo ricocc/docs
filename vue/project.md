@@ -66,3 +66,62 @@ color:$TextColor;
 npm run start
 ```
 
+#### 5. Ajax 使用 axios 实现传值 
+
+实现跨平台的数据请求
+
+安装
+
+```
+npm install axios --save
+```
+
+借助生命周期函数`mounted`来进行数据的获取
+
+```
+import axios from 'axios'
+export default {
+  name: 'Home',
+  components: {
+     HomeHeader,
+     HomeSwiper,
+     HomeIcons,
+     HomeRecommend,
+     HomeWeekend
+  },
+  methods: {
+    getHomeInfo () {
+      axios.get('/api/index.json')
+        .then(this.getHomeInfoSucc)
+    },
+    getHomeInfoSucc (res) {
+      console.log(res)
+    }
+  },
+  mounted () {
+    this.getHomeInfo()
+  }
+}
+```
+
+
+
+配置index.js文件中`  proxyTable: {},`
+
+在本地环境和其他环境数据获取地址
+
+功能是 Webpack-dev-server 提供
+
+```
+    // Paths
+    assetsSubDirectory: 'static',
+    assetsPublicPath: '/',
+    proxyTable: {
+      '/api': {
+        target: 'http://localhost:8183',
+        pathRewrite: {
+          '^/api': '/static/mock'
+        }
+      }
+    },
+```

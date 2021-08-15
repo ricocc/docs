@@ -13,6 +13,7 @@
    
 - PHP
     - [PHP 模板化页面结构](php/start)
+    - [将PHP数组转换为Javascript数组](php/basic)
 
 
 - JS Library - JS库 

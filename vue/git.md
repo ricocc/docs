@@ -33,10 +33,6 @@ npm run start
 
 
 
-
-
-
-
 查询当前远程的版本
 
 > $ git remote -v
@@ -60,6 +56,13 @@ npm run start
 > $ git push origin master  // 将当前分支提交到远端origin/master分支 push到GitHub的文件要求小于100M
 
 
+撤销本地修改
+```bash
+//撤销对所有已修改但未提交的文件，不包括新增的文件
+git checkout 
+#撤销对指定文件的修改，<file> 为文件名
+git checkout <file>
+```
 
 
 
@@ -126,7 +129,7 @@ git diff HEAD -- <file>  #查看工作区和版本库里面最新版本的区别
 复制代码
 ```
 
-反复横跳（版本回退）
+使用`git reset` 回退项目版本
 
 ```shell
 git reset <commitid> #我们使用git log查询到需要回退版本的commitid
